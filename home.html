@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css"> 
+    <style>
+        .container{
+            position: relative;
+        
+        }
+        .box{
+            position: absolute;
+            
+        }
+        </style>
+</head>
+
+<body  style="background-color:#F4FBF3 ;">
+    <div class="conainer">
+        <div class="box"> <img src="background1.png" style="opacity: 80%;background-color: #F4FBF3;width: 190%;height: 30%;margin-bottom: 150px;padding-top: 0px;">
+        </div></div>
+    <div class="container">
+        <div class="back">
+            <a href="homepage2.html"> << Back </a>
+            </div>
+
+<div class="tittle" style="margin-top: 0%;margin-bottom: 10px;"> HOME
+    <div class="box">
+       
+</div>
+</div>
+        <div class="background" style="margin-top: 0%;">
+            <div class="form">
+                <div class="input">
+                    <div class="select">
+                        <label> Type of waste :</label>
+                        <select id="first" style="display: inline;" >
+                             <option> select option</option>
+                        </select>
+                        <select id="second"  style="display: none; margin-left: 30px; border-radius: 1px solid;">
+                            <option> select option</option>
+                       </select>
+                    </div>
+                </div>
+                <div class="input">
+                    <label> Quantity: </label>
+                    <input type="text" value="" id="q1" onblur="points()">
+                </div>
+                <div class="input">
+                    <label> Return points: </label>
+                    <span id = "blankMsg" style="color:red"> </span>
+                    <!-- <input type="text"> -->
+                </div>
+                <div class="input">
+                    <label> Enter phone number: </label>
+                    <input type="number">
+                </div>
+                <div class="input">
+                    <label> Enter your location: </label>
+                    <input type="text">
+                </div>
+                <div class="hash">
+                    <a href="homepage2.php"> Click Here if you want to add another type of waste</a>
+                </div>
+                <div class="confirmation">
+                    <a href="homepage2.php">   <input type="submit" value="Confirm" class="button"></a>
+                </div>
+
+            </div>
+        </div>
+       <script>
+        var type = {
+            "food waste":{
+                "preserved food":[],
+                "Non-edible":[],
+            },
+            "e-waste":{
+                "electronic waste":[],
+                "electrical waste":[]
+            },
+            "metal waste":{
+                "ferrous metal":[],
+                "Non-ferrous metal" :[],
+                "Hazardous waste" :[],
+            },
+            "plastic waste":{
+                "polyethylene":[],
+                "low density polyethylene":[],
+            },
+            "paper waste":{
+                "white paper":[],
+                "coloured paper":[],
+            },
+            "glass waste":{
+                "Flat glass waste":[],
+                "container glass waste":[],
+                "cathode ray tube glass waste":[],
+                "fiber glass waste":[],
+            }
+        }
+ 
+
+    window.onload = function(){
+    var first = document.getElementById('first')
+    var second = document.getElementById('second')
+
+    for(var x in type){
+        first.options[first.options.length] = new Option(x)
+    }
+
+    first.onchange = function(){
+        second.length = 1
+
+        second.style.display = 'inline'
+
+        for(var y in type[this.value]){
+            second.options[second.options.length] = new Option(y)
+
+                }
+            }
+
+        }
+function points(){
+    var k=document.getElementById("q1").value;
+    var q=k*2;
+
+    document.getElementById("blankMsg").innerHTML=q;
+}
+       </script>
+   
+</body>
+
+</html>

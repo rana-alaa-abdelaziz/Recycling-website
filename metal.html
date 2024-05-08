@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+        <style>
+ .navbar{
+    display: inline-block; 
+    text-decoration: none;
+   font-size: 25px;
+   font-weight: 500;
+   padding-left: 30px; 
+    float: right;
+}
+.navbar a{
+    text-decoration: none;
+    color: green;
+    padding: 4px; 
+    transition: 3.5s;
+}
+.navbar a:hover{
+    box-shadow: 0 3px 50px;
+    color: orangered;
+}
+body{
+    background-color: #F4FBF3;
+}
+.image{
+    display: inline;
+    float: left;
+    margin-left: 0px;
+    margin-top: 50px;
+}
+
+.about{
+   position: fixed;
+     display: inline;
+     float: right;
+     margin: 80px;
+     font-style: italic;
+     margin-bottom: 50px;
+     margin-top: 65px; 
+    /* width: 650px;
+     margin-left: 0px;*/
+ 
+     
+ }
+.about h2{
+    color: #373435;
+}
+.about h3{
+    color: #373435;
+
+}
+.about p{
+    font-weight: bold;
+    color: #513F43;
+}
+
+.home{
+    display: inline;
+    float: left;
+    margin-top: 450px;
+    position: fixed;
+    margin-bottom: 25px;
+}
+.homer{
+    font-size: x-large;
+    font-family: 'Courier New', Courier, monospace;
+    color: #373435;
+}
+h1{
+    color: #373435;
+    margin-top: 35px; 
+}
+.li{
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.homer a{
+    color: #513F43;
+    text-decoration: none;
+}
+.accordion {
+    width: 600px;
+    margin-top: 15px;
+  }
+  .title {
+    margin-top: 15px;
+    
+  }
+  .question {
+    display: flex;
+    justify-content: space-between;
+  }
+  .title-question {
+    margin: 0.8rem 0rem;
+  
+    /* margin: 1.4rem 0rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #000; */
+  }
+  .question-btn {
+    font-size: 1.5rem;
+    background: transparent;
+    border-color: transparent;
+    cursor: pointer;
+  }
+  .up-icon {
+    display: none;
+  }
+  /* must redo the pixels/ sizes  */
+  .answer {
+    /* font-size: 1.2rem;
+        line-height: 1.8rem */
+    display: none;
+  }
+  
+  .show-text .answer {
+    display: block;
+  }
+  .show-text .up-icon {
+    display: inline;
+  }
+  .show-text .down-icon {
+    display: none;
+  }
+  
+
+  </style>
+ </head>
+    <body>
+      <div class="back">
+        <a href="homepage2.html" style="text-decoration: none;font-size: 28px;color: #373435;"> << Back </a>
+        </div>
+            <div class="image">
+     <img src="4.png" width="390px" height="390px">
+    </div>
+        <div class="about"> 
+        <h2> <i> Metal waste recycling :  </i></h2>
+        <h3> <i> is the process of recovering and converting scrap metal into usable products or raw materials.  </i></h3>
+        <p> One of the main benefits is the reduction of environmental impact. Recycling metals decreases the amount of metal waste that ends up in landfills,
+        contaminate surrounding soil and water. The recycling of metals also saves energy,as it requires less energy to recycle metal than to extract it from raw
+        materials. Recycling metals also conserves natural resources <p>
+
+            <div class="container">
+                <h1 class="title">Do You Want To Know More About The Process?</h1>
+                <main class="accordion">
+                  <div class="question-answer">
+                    <div class="question">
+                      <h3 class="title-question">What is Metal Waste?</h3>
+                      <button class="question-btn">
+                        <span class="up-icon">
+                          <i class="fa-solid fa-chevron-up"></i>
+                        </span>
+                        <span class="down-icon">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </span>
+                      </button>
+                    </div>
+                    <div class="answer">
+                      <p>
+                        Hazard metals are metals that can pose a risk to human health or the environment when they are not properly disposed of. 
+                        These metals include lead, mercury, cad mium, arsen ic, and chromium, among others. Exposure to these metals can cause a range of health problems,
+                         including respiratory issues, neurological damage, and cancer
+                      </p>
+                    </div>
+                  </div>
+                  <div class="question-answer">
+                    <div class="question">
+                      <h3 class="title-question">How we will deal with Metal Waste?</h3>
+                      <button class="question-btn">
+                        <span class="up-icon">
+                          <i class="fa-solid fa-chevron-up"></i>
+                        </span>
+                        <span class="down-icon"
+                          ><i class="fa-solid fa-chevron-down"></i>
+                        </span>
+                      </button>
+                    </div>
+                    <div class="answer">
+                      <p>
+              We will filter these materials into groups contains same type
+              then give each group to competent authorities that will re-use it in their manufacture
+              which will reduce the amount of energy consumed by manufacturing raw materials.
+                  
+                      </p>
+                    </div>
+                  </div>
+                </main>
+              </div>
+            </div>
+       <div class="home">
+       <h1> select either Business or Home to start your request:</h1>
+       <ul class="homer"> 
+    <li class="li"><a href="home.html">Home</a></li>
+    <li><a href="buisness.html">Business</a></li>
+</ul>
+    </div>
+    
+
+    <script>
+        const question = document.querySelectorAll(".question-answer");
+
+       question.forEach(function (question) {
+       const btn = question.querySelector(".question-btn");
+       console.log(btn);
+       btn.addEventListener("click", function () {
+// question.forEach(function (item) {
+//   if (item !== question) {
+//     item.classList.remove("show-text");
+//   }
+// });
+    question.classList.toggle("show-text");
+});
+});
+    </script>
+     
+
+
+       
+
+
+    </body>
+</html>

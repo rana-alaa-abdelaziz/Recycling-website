@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="UTF-8">
+    <head>
+      
+        <link
+      rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+      
+        <style>
+.nav-links input[type=text], .search {
+  float: left;
+  font-size: 17px;
+  border-radius: 25px;
+  border: 2px solid #73AD21; 
+  
+}
+.nav-links input[type=text] {
+  border: 1px solid #73AD21;
+}
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    position:relative;
+
+}
+nav{
+    display:flex;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F4FBF3;
+
+}
+.nav image{
+
+    size: 15px;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+    position: sticky;
+}
+.nav-links ul li{
+  list-style: none;
+    display: inline-block;
+    padding: 5px 12px;
+    position: relative;
+    position: sticky;
+    z-index: 999;
+}
+.nav-links ul li a{
+    color: #0f6202;
+    text-decoration: none;
+    font-size: 23px;
+    position: sticky;
+
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #305f29;
+    display: block;
+     
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+body{
+    background-color: #F4FBF3;
+}
+.image{
+    display: inline;
+    float: left;
+    margin-left: 30px; 
+    margin-top: 10px; 
+}
+
+ .about{
+    position: fixed;
+     display: inline;
+     float: right;
+     margin: 80px;
+     font-style: italic;
+     margin-bottom: 50px;
+     margin-top: 40px; 
+    /* width: 650px;
+     margin-left: 0px;*/
+ 
+     
+    
+}
+.about h2{
+    color: #254D38;
+}
+.about h3{
+    color:#254D38 ;
+
+}
+.about p{
+    font-weight: bold;
+    color: #0F6202;
+}
+
+.home{
+    display: inline;
+    float: left;
+    margin-top: 450px;
+    position: fixed;
+    margin-bottom: 25px;
+
+
+}
+.homer{
+    font-size: x-large;
+    font-family: 'Courier New', Courier, monospace;
+    color: #254D38;
+
+    
+}
+h1{
+    color: #254D38;
+    margin-top: 35px; 
+}
+.li{
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.homer a{
+    color: #0F6202;
+    text-decoration: none;
+}
+.accordion {
+  width: 600px;
+  margin-top: 15px;
+}
+.title {
+  margin-top: 15px;
+}
+.question {
+  display: flex;
+  justify-content: space-between;
+}
+.title-question {
+  margin: 0.8rem 0rem;
+
+  /* margin: 1.4rem 0rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #000; */
+}
+.question-btn {
+  font-size: 1.5rem;
+  background: transparent;
+  border-color: transparent;
+  cursor: pointer;
+}
+.up-icon {
+  display: none;
+}
+/* must redo the pixels/ sizes  */
+.answer {
+  /* font-size: 1.2rem;
+      line-height: 1.8rem */
+  display: none;
+}
+
+.show-text .answer {
+  display: block;
+}
+.show-text .up-icon {
+  display: inline;
+}
+.show-text .down-icon {
+  display: none;
+}
+
+
+  </style>
+ </head>
+    <body>
+      
+   
+      <div class="back">
+        <a href="homepage2.php" style="text-decoration: none;font-size: 28px;color: #305f29;"> << Back </a>
+        </div>
+            <div class="image">
+     <img src="6.png" width="420px" height="420px">
+            </div>
+        <div class="about"> 
+        <h2> <i> E-waste waste recycling :  </i></h2>
+        <h3> <i> also known as electronic waste, refers to the disposal of electronic devices
+            such as smartphones, computers, televisions, and other electronic equipment.  </i></h3>
+        <p> through recycling e-waste, valuable metals like gold, silver, copper, and
+            platinum can be extracted and reused, reducing the environmental and social
+            impacts of mining for these metals. Besides, recycling e-waste reduces the
+            amount of energy and materials required to manufacture new electronic
+            devices,  <p>
+                <div class="container">
+                    <h1 class="title">Do You Want To Know More About The Process?</h1>
+                    <main class="accordion">
+                      <div class="question-answer">
+                        <div class="question">
+                          <h3 class="title-question">what is electronic waste</h3>
+                          <button class="question-btn">
+                            <span class="up-icon">
+                              <i class="fa-solid fa-chevron-up"></i>
+                            </span>
+                            <span class="down-icon">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </span>
+                          </button>
+                        </div>
+                        <div class="answer">
+                          <p>
+                            Electronic waste, also known as e-w aste, is any discarded electronic device or equipment, such as computers, mobile phones, tele visions, and other electronic appliances. These devices can contain harmful chemicals and materials that can cont am inate the environment if not disposed of properly.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="question-answer">
+                        <div class="question">
+                          <h3 class="title-question">what is electrical waste</h3>
+                          <button class="question-btn">
+                            <span class="up-icon">
+                              <i class="fa-solid fa-chevron-up"></i>
+                            </span>
+                            <span class="down-icon"
+                              ><i class="fa-solid fa-chevron-down"></i>
+                            </span>
+                          </button>
+                        </div>
+                        <div class="answer">
+                          <p>
+                            Elect rical waste, also known as e-w aste, is a term used to describe discarded electronic devices and equipment such as mobile phones, computers, tele visions, and other household electrical appliances. These items may contain hazardous materials like lead, cad mium, and mercury, which pose significant risks to human health 
+                          </p>
+                        </div>
+                      </div>
+                    </main>
+                  </div>
+           
+            </div>
+                <div class="home">
+                    <h1> select either Business or Home to start your request:</h1>
+             <ul class="homer"> 
+                 <li class="li"><a href="home.html">Home</a> </li>
+                 <li><a href="buisness.html">Business</a></li>
+             </ul>
+             </div>
+             
+                 </section>
+
+            <script>
+                const question = document.querySelectorAll(".question-answer");
+
+               question.forEach(function (question) {
+               const btn = question.querySelector(".question-btn");
+               console.log(btn);
+               btn.addEventListener("click", function () {
+    // question.forEach(function (item) {
+    //   if (item !== question) {
+    //     item.classList.remove("show-text");
+    //   }
+    // });
+            question.classList.toggle("show-text");
+  });
+});
+            </script>
+             
+
+
+       
+
+
+    </body>
+</html>

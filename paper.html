@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link
+      rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+        <style>
+
+body{
+    background-color: #F4FBF3;
+}
+.image{
+    display: inline;
+    float: left;
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+ .about{
+   position: fixed;
+    display: inline;
+    float: right;
+    margin: 80px;
+    font-style: italic;  
+    margin-bottom: 0px;
+    margin-top: 65px; 
+}
+.about h2{
+    color: #073A1D;
+}
+.about h3{
+    color:#073A1D ;
+
+}
+.about p{
+    font-weight: bold;
+    color: #386C2D;
+}
+
+.home{
+    display: inline;
+    float: left;
+    margin-top: 450px;
+    position: fixed;
+    margin-bottom: 25px;
+}
+.homer{
+    font-size: x-large;
+    font-family: 'Courier New', Courier, monospace;
+    color: #073A1D;
+}
+h1{
+    color: #073A1D;
+    margin-top: 35px; 
+}
+.li{
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.homer a{
+    color: #386C2D;
+    text-decoration: none;
+}
+.accordion {
+  width: 600px;
+  margin-top: 15px;
+}
+.title {
+  margin-top: 15px;
+}
+.question {
+  display: flex;
+  justify-content: space-between;
+}
+.title-question {
+  margin: 0.8rem 0rem;
+
+  /* margin: 1.4rem 0rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #000; */
+}
+.question-btn {
+  font-size: 1.5rem;
+  background: transparent;
+  border-color: transparent;
+  cursor: pointer;
+}
+.up-icon {
+  display: none;
+}
+/* must redo the pixels/ sizes  */
+.answer {
+  /* font-size: 1.2rem;
+      line-height: 1.8rem */
+  display: none;
+}
+
+.show-text .answer {
+  display: block;
+}
+.show-text .up-icon {
+  display: inline;
+}
+.show-text .down-icon {
+  display: none;
+}
+
+  </style>
+ </head>
+ <div class="back">
+  <a href="homepage2.html" style="text-decoration: none;font-size: 28px;color: #305f29;"> << Back </a>
+  </div>
+            <div class="image">
+     <img src="5.png" width="400px" height="400px">
+    </div>
+        <div class="about"> 
+        <h2> <i> paper waste recycling :  </i></h2>
+        <h3> <i> is the process of recovering and reprocessing wastepaper
+            materials for their reuse in the manufacturing of new paper products.   </i></h3>
+        <p> It helps to conserve natural resource, saves energy by requiring less energy to
+            produce new paper products, and reduces the amount of waste sent to
+            landfills.  <p>
+                <div class="container">
+                    <h1 class="title">Do You Want To Know More About The Process?</h1>
+                    <main class="accordion">
+                      <div class="question-answer">
+                        <div class="question">
+                          <h3 class="title-question">White paper</h3>
+                          <button class="question-btn">
+                            <span class="up-icon">
+                              <i class="fa-solid fa-chevron-up"></i>
+                            </span>
+                            <span class="down-icon">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </span>
+                          </button>
+                        </div>
+                        <div class="answer">
+                          <p>
+                            A white paper is a detailed and authoritative report or guide that presents information and analysis on a particular topic, often related to business, technology, economics, or government policy. The term" white paper" originated in government to refer to documents that set out policy proposals or explanations of specific issues. In busines
+
+                          </p>
+                        </div>
+                      </div>
+                      <div class="question-answer">
+                        <div class="question">
+                          <h3 class="title-question">Colored paper</h3>
+                          <button class="question-btn">
+                            <span class="up-icon">
+                              <i class="fa-solid fa-chevron-up"></i>
+                            </span>
+                            <span class="down-icon"
+                              ><i class="fa-solid fa-chevron-down"></i>
+                            </span>
+                          </button>
+                        </div>
+                        <div class="answer">
+                          <p>
+                            Colored paper refers to paper that is not white or beige, but instead has been dy ed or tint ed in a variety of colors. It can be used for a variety of purposes such as creating colorful crafts, printing invitations, making posters, and more. The color of the paper can also affect the mood and tone of the message.
+                          </p>
+                        </div>
+                      </div>
+                    </main>
+                  </div>
+            </div>
+                <div class="home">
+                    <h1> select either Business or Home to start your request:</h1>
+             <ul class="homer"> 
+                 <li class="li"><a href="home.html">Home</a></li>
+                 <li><a href="buisness.html">Business</a></li>
+             </ul>
+             </div>
+
+            
+    
+
+            <script>
+                const question = document.querySelectorAll(".question-answer");
+
+               question.forEach(function (question) {
+               const btn = question.querySelector(".question-btn");
+               console.log(btn);
+               btn.addEventListener("click", function () {
+    // question.forEach(function (item) {
+    //   if (item !== question) {
+    //     item.classList.remove("show-text");
+    //   }
+    // });
+            question.classList.toggle("show-text");
+  });
+});
+            </script>
+             
+
+
+    </body>
+</html>
